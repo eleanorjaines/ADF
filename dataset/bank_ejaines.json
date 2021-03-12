@@ -1,0 +1,102 @@
+{
+	"name": "bank_ejaines",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalab3kubrick_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CLIENTNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Attrition_Flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Customer_Age",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Gender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dependent_count",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Education_Level",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Marital_Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Income_Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Card_Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Months_on_book",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Relationship_Count",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Months_Inactive_12_mon",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contacts_Count_12_mon",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Credit_Limit",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Revolving_Bal",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Avg_Open_To_Buy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Amt_Chng_Q4_Q1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Trans_Amt",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Trans_Ct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Total_Ct_Chng_Q4_Q1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Avg_Utilization_Ratio",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "bank_ejaines"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

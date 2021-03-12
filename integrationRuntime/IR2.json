@@ -1,0 +1,16 @@
+{
+	"name": "IR2",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "UK South",
+				"dataFlowProperties": {
+					"computeType": "ComputeOptimized",
+					"coreCount": 48,
+					"timeToLive": 30
+				}
+			}
+		}
+	}
+}

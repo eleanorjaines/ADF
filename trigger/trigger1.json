@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "codata_multiple",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/codata/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/81df0e84-cab6-4a67-a0ae-b3c6c9e989e8/resourceGroups/kresgroup1/providers/Microsoft.Storage/storageAccounts/ablobstore",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

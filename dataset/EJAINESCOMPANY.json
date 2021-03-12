@@ -1,0 +1,38 @@
+{
+	"name": "EJAINESCOMPANY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "conum",
+				"type": "varchar"
+			},
+			{
+				"name": "coname",
+				"type": "varchar"
+			},
+			{
+				"name": "city",
+				"type": "varchar"
+			},
+			{
+				"name": "state",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "ejaines",
+			"table": "company"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

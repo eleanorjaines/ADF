@@ -1,0 +1,26 @@
+{
+	"name": "states",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "statecode",
+				"type": "varchar"
+			},
+			{
+				"name": "statename",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "states"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

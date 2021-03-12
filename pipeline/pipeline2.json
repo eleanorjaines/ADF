@@ -1,0 +1,330 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data2",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlServerSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CLIENTNUM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLIENTNUM",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Attrition_Flag",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Attrition_Flag",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer_Age",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Customer_Age",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Gender",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gender",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Dependent_count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Dependent_count",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Education_Level",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Education_Level",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Marital_Status",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Marital_Status",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Income_Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Income_Category",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Card_Category",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Card_Category",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Months_on_book",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Months_on_book",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Relationship_Count",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Relationship_Count",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Months_Inactive_12_mon",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Months_Inactive_12_mon",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Contacts_Count_12_mon",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Contacts_Count_12_mon",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Credit_Limit",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Credit_Limit",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Revolving_Bal",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Revolving_Bal",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Avg_Open_To_Buy",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Avg_Open_To_Buy",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Amt_Chng_Q4_Q1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Amt_Chng_Q4_Q1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Trans_Amt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Trans_Amt",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Trans_Ct",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Trans_Ct",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Total_Ct_Chng_Q4_Q1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_Ct_Chng_Q4_Q1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Avg_Utilization_Ratio",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Avg_Utilization_Ratio",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "cardcustomer",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "bank_ejaines",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-03-10T16:25:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
